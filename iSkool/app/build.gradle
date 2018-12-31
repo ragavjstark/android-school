@@ -18,6 +18,10 @@ android {
     }
 }
 
+repositories {
+    maven { url 'https://dl.google.com/dl/android/maven2/' }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
@@ -25,4 +29,18 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    /*Maven dependencies*/
+    implementation "mysql:mysql-connector-java:${mysqlVersion}"
+    implementation "org.springframework:spring-core:${springVersion}"
+    implementation "org.springframework:spring-context:${springVersion}"
+    implementation "org.springframework:spring-webmvc:${springVersion}"
+    implementation "org.springframework:spring-orm:${springVersion}"
+    implementation "org.hibernate:hibernate-core:${hibernateVersion}"
+    implementation "javax.servlet:javax.servlet-api:${servletVersion}"
+    implementation "javax.servlet.jsp:javax.servlet.jsp-api:${servletjspVersion}"
+    implementation "jstl:jstl:${jstlVersion}"
+    implementation "org.apache.commons:commons-dbcp2:${apacheVersion}"
+
 }
+
